@@ -25,14 +25,13 @@
     }
 
     img {
-      width: 75%;
-      display: block;
-      margin: 10px auto;
+      width: 100%;
+
       transition: transform 1000ms ease-in-out;
     }
 
     img:hover {
-      transform: scale(1.5);
+      transform: translate3d(100px, 100px, 150px) scale(2);
     }
     .white-theme {
       background: #ffcab0;
@@ -82,36 +81,44 @@
       border-radius: 10px;
       padding-bottom: 10px;
     }
+
+    .img-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
   </style>
   <body>
     <button class="white-theme theme-button">Dark Theme</button>
     <div class="main-body white-theme">
       <h1>I ❤ PHOTOGRAPHY 📷</h1>
       <h2>I am a Canon girl 😍</h2>
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/359/original/184595_10151307270674000_348212579_n.jpg?1717742609"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/355/original/50058617_10156800132559000_4620892267941462016_n.jpg?1717742463"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/356/original/5715_10151449177159000_2031791933_n.jpg?1717742502"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/357/original/64811_10151449190619000_521477213_n.jpg?1717742522"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/358/original/14468436_10154453418969000_5761563471196793701_o.jpg?1717742561"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/354/original/IMG_5539.JPG?1717742281"
-        alt=""
-      />
+      <div class="img-gallery">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/359/original/184595_10151307270674000_348212579_n.jpg?1717742609"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/355/original/50058617_10156800132559000_4620892267941462016_n.jpg?1717742463"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/356/original/5715_10151449177159000_2031791933_n.jpg?1717742502"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/357/original/64811_10151449190619000_521477213_n.jpg?1717742522"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/358/original/14468436_10154453418969000_5761563471196793701_o.jpg?1717742561"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/354/original/IMG_5539.JPG?1717742281"
+          alt=""
+        />
+      </div>
       <p>
         Photography is the art, application, and practice of creating images by
         recording light, either electronically by means of an image sensor, or
