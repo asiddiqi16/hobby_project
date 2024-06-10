@@ -7,12 +7,15 @@
   </head>
   <style>
     body {
-      background: rgba(177, 75, 24, 0.3);
-    }
-    h1,
-    h2 {
+      background: radial-gradient(
+        circle at 10% 20%,
+        rgb(255, 252, 214) 0%,
+        rgba(255, 102, 102, 0.44) 90%
+      );
+      background-size: cover;
       color: #b14b18;
     }
+
     p {
       font-size: 18px;
       line-height: 1.5;
@@ -33,9 +36,7 @@
     img:hover {
       transform: translate3d(100px, 100px, 150px) scale(2);
     }
-    .white-theme {
-      background: #ffcab0;
-    }
+
     button.theme-button {
       display: block;
       margin: 10px auto;
@@ -43,9 +44,6 @@
       border: none;
       border-radius: 10px;
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    button.white-theme {
       color: #b14b18;
       background: #ffcab0;
     }
@@ -61,10 +59,14 @@
       background: #d56127;
       font-size: 20px;
     }
+
+    button:hover {
+      cursor: pointer;
+    }
     .main-body,
     footer {
       text-align: center;
-      margin-bottom: 10px;
+      margin-top: 10px;
     }
 
     .main-body h1,
@@ -80,17 +82,25 @@
       max-width: 900px;
       border-radius: 10px;
       padding-bottom: 10px;
+      background: #ffcab0;
+      margin-bottom: 250px;
     }
 
     .img-gallery {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 10px;
+      margin: 10px 20px;
+    }
+
+    .dark-theme {
+      color: #ffcab0;
+      background: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
     }
   </style>
-  <body>
-    <button class="white-theme theme-button">Dark Theme</button>
-    <div class="main-body white-theme">
+  <body class="">
+    <button class="theme-button">Change Theme</button>
+    <div class="main-body">
       <h1>I ❤ PHOTOGRAPHY 📷</h1>
       <h2>I am a Canon girl 😍</h2>
       <div class="img-gallery">
@@ -135,5 +145,25 @@
         >Ariba Siddiqi</a
       >
     </footer>
+    <script>
+      function changeTheme() {
+        let bodyTheme = document.querySelector("body");
+        if (bodyTheme.classList.contains("dark-theme")) {
+          bodyTheme.classList.remove("dark-theme");
+        } else {
+          bodyTheme.classList.add("dark-theme");
+        }
+
+        let mainTheme = document.querySelector(".main-body");
+        if (mainTheme.classList.contains("dark-theme")) {
+          mainTheme.classList.remove("dark-theme");
+        } else {
+          mainTheme.classList.add("dark-theme");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+
+      themeButton.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
